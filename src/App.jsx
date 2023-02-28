@@ -35,11 +35,19 @@ const tweetsArray = [
 ];
 
 function App() {
+
   return (
-    <div><Tweet tweet={tweetsArray[0]} />,
-      <Tweet tweet={tweetsArray[1]} />,
-      <Tweet tweet={tweetsArray[2]} /></div>
+    <div>
+      {tweetsArray.map((tweet) => <Tweet tweet={tweet} key={tweet.timestamp} />)}
+    </div>
   );
 }
+
+/* <Tweet tweet={tweetsArray[0]} />,
+<Tweet tweet={tweetsArray[1]} />,
+<Tweet tweet={tweetsArray[2]} /> */
+
+/* <Tweet tweet={tweetsArray.map(tweet => {user.name} )}/> */
+
 
 export default App;
